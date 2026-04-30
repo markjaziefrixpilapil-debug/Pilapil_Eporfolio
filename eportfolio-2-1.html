@@ -130,7 +130,7 @@
       inset: 0;
       width: 100%; height: 100%;
       object-fit: cover;
-      display: none;
+      display: block;
       border-radius: 50%;
     }
     .photo-placeholder-text {
@@ -336,12 +336,103 @@
       transform: translateY(0);
     }
 
+    /* GALLERY */
+    .gallery-intro {
+      max-width: 760px;
+      color: var(--text-soft);
+      margin-bottom: 28px;
+      font-size: 0.98rem;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+    .gallery-group {
+      margin-top: 34px;
+    }
+    .gallery-group:first-of-type {
+      margin-top: 0;
+    }
+    .gallery-group-head {
+      margin-bottom: 18px;
+    }
+    .gallery-group-label {
+      display: inline-block;
+      margin-bottom: 8px;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .gallery-group-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .gallery-group-copy {
+      color: var(--text-soft);
+      font-size: 0.95rem;
+      max-width: 680px;
+    }
+    .gallery-card {
+      margin: 0;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.94);
+      box-shadow: 0 12px 32px rgba(15,31,61,0.08);
+    }
+    .gallery-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: rgba(26,50,96,0.08);
+    }
+    .gallery-overlay {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 18px 20px 20px;
+      color: var(--navy);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,244,237,0.96));
+    }
+    .gallery-kicker {
+      align-self: flex-start;
+      border: 1px solid rgba(26,50,96,0.12);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: rgba(201,147,58,0.1);
+      color: var(--gold-dark);
+    }
+    .gallery-text strong {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+    .gallery-text span {
+      display: block;
+      color: var(--text-soft);
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
     @media (max-width: 640px) {
       nav { padding: 14px 20px; }
       nav ul { gap: 16px; }
       section { padding: 60px 24px; }
       .hero { padding: 60px 24px; }
       .reflection-card { padding: 24px 20px; }
+      .gallery-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -352,6 +443,7 @@
   <div class="nav-logo">M.J.F. Pilapil</div>
   <ul>
     <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Evidence</a></li>
     <li><a href="#prelim">Prelim</a></li>
     <li><a href="#midterm">Midterm</a></li>
     <li><a href="#finals">Finals</a></li>
@@ -404,6 +496,169 @@
   </div>
 </section>
 
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="term-section fade-in">
+    <p class="section-label">Visual Archive</p>
+    <h2 class="section-title">Portfolio Evidence</h2>
+    <div class="underline-bar"></div>
+    <p class="gallery-intro">
+      The screenshots are inserted directly into the page so they are visible without uploading anything each time you open the portfolio.
+    </p>
+
+    <div class="gallery-group">
+      <div class="gallery-group-head">
+        <span class="gallery-group-label">First Term</span>
+        <h3 class="gallery-group-title">Preliminary Evidence</h3>
+        <p class="gallery-group-copy">Performance tasks, laboratory activities, quizzes, and the preliminary examination for the first term.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-card">
+          <img src="images/portfolio/prelim-pt11.png" alt="Performance Task 1.1 screenshot" />
+          <figcaption class="gallery-overlay">
+            <span class="gallery-kicker">Prelim</span>
+            <span class="gallery-text">
+              <strong>Performance Task 1.1 (Lab 1)</strong>
+              <span>Creating and modifying SQL Server database.</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card">
+          <img src="images/portfolio/prelim-pt12.png" alt="Performance Task 1.2 screenshot" />
+          <figcaption class="gallery-overlay">
+            <span class="gallery-kicker">Prelim</span>
+            <span class="gallery-text">
+              <strong>Performance Task 1.2 (Lab 2)</strong>
+              <span>SQL constraints and inserting records.</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card">
+          <img src="images/portfolio/prelim-week4.png" alt="Week 4 Lab Activity screenshot" />
+          <figcaption class="gallery-overlay">
+            <span class="gallery-kicker">Prelim</span>
+            <span class="gallery-text">
+              <strong>Week 4 Lab Activity</strong>
+              <span>Creating database and tables using SSMS.</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card">
+          <img src="images/portfolio/prelim-week5.png" alt="Week 5 Lab DDL screenshot" />
+          <figcaption class="gallery-overlay">
+            <span class="gallery-kicker">Prelim</span>
+            <span class="gallery-text">
+              <strong>Week 5 Lab DDL SQL Constraints</strong>
+              <span>Week 5 laboratory evidence using SSMS.</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card">
+          <img src="images/portfolio/prelim-quiz1.png" alt="SQL Server Prelim Quiz 1 screenshot" />
+          <figcaption class="gallery-overlay">
+            <span class="gallery-kicker">Prelim</span>
+            <span class="gallery-text">
+              <strong>SQL Server Prelim Quiz 1</strong>
+              <span>Quiz evidence for SELECT statements and retrieval.</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card">
+          <img src="images/portfolio/prelim-quiz2.png" alt="Prelim SQL Server Quiz 2 screenshot" />
+          <figcaption class="gallery-overlay">
+            <span class="gallery-kicker">Prelim</span>
+            <span class="gallery-text">
+              <strong>Prelim SQL Server Quiz 2</strong>
+              <span>Second preliminary quiz submission screenshot.</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card">
+          <img src="images/portfolio/prelim-exam.png" alt="Prelim exam screenshot" />
+          <figcaption class="gallery-overlay">
+            <span class="gallery-kicker">Prelim</span>
+            <span class="gallery-text">
+              <strong>Prelim Exam</strong>
+              <span>Database concepts and SQL Server fundamentals.</span>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="gallery-group">
+      <div class="gallery-group-head">
+        <span class="gallery-group-label">Second Term</span>
+        <h3 class="gallery-group-title">Midterm Evidence</h3>
+        <p class="gallery-group-copy">Midterm activities and the submitted midterm examination confirmation.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-card">
+          <img src="images/portfolio/midterm-activity1.png" alt="Midterm Activity 1 screenshot" />
+          <figcaption class="gallery-overlay">
+            <span class="gallery-kicker">Midterm</span>
+            <span class="gallery-text">
+              <strong>Midterm Activity 1</strong>
+              <span>SQL operators and aggregate functions activity.</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card">
+          <img src="images/portfolio/midterm-activity2.png" alt="Midterm Activity screenshot" />
+          <figcaption class="gallery-overlay">
+            <span class="gallery-kicker">Midterm</span>
+            <span class="gallery-text">
+              <strong>Midterm Activity</strong>
+              <span>SQL joins and GMETRIX practice exam evidence.</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card">
+          <img src="images/portfolio/midterm-exam.png" alt="Midterm exam screenshot" />
+          <figcaption class="gallery-overlay">
+            <span class="gallery-kicker">Midterm</span>
+            <span class="gallery-text">
+              <strong>Midterm Exam 2026</strong>
+              <span>Submitted Microsoft Forms confirmation screenshot.</span>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="gallery-group">
+      <div class="gallery-group-head">
+        <span class="gallery-group-label">Final Term</span>
+        <h3 class="gallery-group-title">Final Evidence</h3>
+        <p class="gallery-group-copy">Final project support materials connected to the database system group work.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-card">
+          <img src="images/portfolio/final-project-briefing.png" alt="Final project briefing screenshot" />
+          <figcaption class="gallery-overlay">
+            <span class="gallery-kicker">Finals</span>
+            <span class="gallery-text">
+              <strong>Final Project Briefing and Group Instructions</strong>
+              <span>Database system project files, group references, and documentation materials.</span>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PRELIM -->
 <section id="prelim" class="alt-bg">
   <div class="term-section fade-in">
@@ -430,6 +685,70 @@
       <p>
         Looking back on the preliminary term, I now recognize that the discomfort I felt early on was not a setback but a signal of growth. Every topic that confused me became an opportunity to ask better questions, seek support from classmates, and deepen my understanding. By the end of this period, I had not only gained academic knowledge but also a stronger sense of self-confidence and a clearer picture of the student I aspired to become.
       </p>
+    </div>
+  </div>
+</section>
+
+<!-- PRELIM DELIVERABLES -->
+<section class="alt-bg">
+  <div class="term-section fade-in">
+    <p class="section-label">First Term</p>
+    <h2 class="section-title">Preliminary Deliverables</h2>
+    <div class="underline-bar"></div>
+
+    <div class="reflection-card">
+      <h3><span class="badge">Written Works</span> Quizzes</h3>
+      <p>
+        Throughout the preliminary term, quizzes served as important checkpoints in my learning journey. These assessments helped me identify areas where I needed to strengthen my understanding and provided valuable feedback on my progress. Each quiz required me to synthesize the material covered in lectures and readings, pushing me to engage more deeply with the course content. The experience of taking these quizzes reinforced the importance of consistent studying and active participation in class.
+      </p>
+      <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+        <p style="font-weight: 500; margin-bottom: 10px;">Assessments Completed:</p>
+        <ul style="margin-left: 20px; color: var(--text-soft);">
+          <li>SQL Server Prelim Quiz 1 (20 points)</li>
+          <li>Prelim SQL Server Quiz 2 (100 points)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reflection-card">
+      <h3><span class="badge">Performance Tasks</span> Seatworks & Assignments</h3>
+      <p>
+        Seatworks and assignments during the preliminary term were instrumental in helping me apply theoretical knowledge to practical situations. These tasks encouraged me to think critically, collaborate with peers, and develop problem-solving skills. Working on these assignments taught me the value of attention to detail and the importance of following instructions carefully. I learned that performance tasks are not just evaluations — they are opportunities to practice and refine the skills I will need in real-world applications.
+      </p>
+      <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+        <p style="font-weight: 500; margin-bottom: 10px;">Tasks Completed:</p>
+        <ul style="margin-left: 20px; color: var(--text-soft);">
+          <li>Performance Task 1.1 (Lab 1) - Creating and Modifying SQL Server Database (20 points)</li>
+          <li>Performance Task 1.2 (Lab 2) - Setting SQL Constraints and Inserting Records (20 points)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reflection-card">
+      <h3><span class="badge">Product</span> Laboratory Exercises</h3>
+      <p>
+        Laboratory exercises in the preliminary term provided hands-on experience with the concepts we were studying. These sessions were where theory came to life, and I gained practical understanding that lectures alone could not provide. Through these exercises, I developed technical skills, learned to troubleshoot problems, and gained confidence in my ability to apply knowledge independently. The laboratory work also taught me the importance of precision, documentation, and safety protocols in academic and professional settings.
+      </p>
+      <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+        <p style="font-weight: 500; margin-bottom: 10px;">Exercises Completed:</p>
+        <ul style="margin-left: 20px; color: var(--text-soft);">
+          <li>Week 4 Lab Activity - Creating Database and Tables (20 points)</li>
+          <li>Week 5 Lab - DDL SQL Constraints using SSMS (20 points)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reflection-card">
+      <h3><span class="badge">Assessment</span> Preliminary Examination</h3>
+      <p>
+        The preliminary examination was a comprehensive assessment of my learning during the first term. Preparing for this exam required me to review all the material systematically and identify connections between different topics. The examination tested not just my memorization but my ability to apply concepts, analyze problems, and communicate my understanding clearly. Despite the initial nervousness, taking the exam gave me confidence in my preparation and reinforced the effectiveness of my study strategies. This experience motivated me to maintain the same disciplined approach to learning throughout the remaining terms.
+      </p>
+      <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+        <p style="font-weight: 500; margin-bottom: 10px;">Examination:</p>
+        <ul style="margin-left: 20px; color: var(--text-soft);">
+          <li>Prelim Exam: Database Concepts and SQL Server Fundamentals (50 points)</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -464,6 +783,72 @@
   </div>
 </section>
 
+<!-- MIDTERM DELIVERABLES -->
+<section>
+  <div class="term-section fade-in">
+    <p class="section-label">Second Term</p>
+    <h2 class="section-title">Midterm Deliverables</h2>
+    <div class="underline-bar"></div>
+
+    <div class="reflection-card">
+      <h3><span class="badge">Written Works</span> Quizzes</h3>
+      <p>
+        The quizzes during the midterm period were notably more challenging than those in the preliminary term, which reflected my advancement in the course. I found myself tackling more complex problems and required to demonstrate a deeper understanding of the material. These assessments pushed me to not just recall information but to analyze it critically and apply it to new situations. The feedback I received from these quizzes was invaluable, helping me identify gaps in my knowledge and areas where I needed further study. By performing well on these quizzes, I gained confidence in my ability to handle increasingly sophisticated academic work.
+      </p>
+      <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+        <p style="font-weight: 500; margin-bottom: 10px;">Assessments Completed:</p>
+        <ul style="margin-left: 20px; color: var(--text-soft);">
+          <li>Midterm Quizzes - SQL Operators and Aggregate Functions</li>
+        </ul>
+      </div>
+    </div>
+      <p>
+        During the midterm, seatworks and assignments became more demanding, often involving collaborative projects and extended problem-solving exercises. These tasks required me to work efficiently under time constraints, communicate my ideas effectively to others, and adapt my approach when initial solutions didn't work. I discovered the value of peer collaboration during this term — working with classmates exposed me to different perspectives and problem-solving strategies that I might not have considered on my own. These assignments reinforced that learning is not a solitary endeavor but a social process where diverse viewpoints strengthen collective understanding.
+      </p>
+    </div>
+
+    <div class="reflection-card">
+      <h3><span class="badge">Performance Tasks</span> Seatworks & Assignments</h3>
+      <p>
+        During the midterm, seatworks and assignments became more demanding, often involving collaborative projects and extended problem-solving exercises. These tasks required me to work efficiently under time constraints, communicate my ideas effectively to others, and adapt my approach when initial solutions didn't work. I discovered the value of peer collaboration during this term — working with classmates exposed me to different perspectives and problem-solving strategies that I might not have considered on my own. These assignments reinforced that learning is not a solitary endeavor but a social process where diverse viewpoints strengthen collective understanding.
+      </p>
+      <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+        <p style="font-weight: 500; margin-bottom: 10px;">Tasks Completed:</p>
+        <ul style="margin-left: 20px; color: var(--text-soft);">
+          <li>Midterm Activity 1 - SQL Operators and Aggregate Functions (100 points)</li>
+          <li>Midterm Activity - SQL Server Joins & CMETRIX Practice Exam (100 points)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reflection-card">
+      <h3><span class="badge">Product</span> Laboratory Exercises</h3>
+      <p>
+        Laboratory exercises in the midterm term allowed me to deepen the technical skills I had begun developing in the preliminary period. With greater familiarity with equipment and procedures, I was able to focus more on understanding the underlying principles rather than just following steps. I became more independent in designing and conducting experiments, troubleshooting issues, and interpreting results. The hands-on nature of these exercises reinforced how important practical experience is in truly grasping complex concepts. Each exercise was a stepping stone to becoming more competent and confident in my technical abilities.
+      </p>
+      <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+        <p style="font-weight: 500; margin-bottom: 10px;">Exercises Completed:</p>
+        <ul style="margin-left: 20px; color: var(--text-soft);">
+          <li>Midterm Lab Activities - Advanced SQL Queries and Joins</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reflection-card">
+      <h3><span class="badge">Assessment</span> Midterm Examination</h3>
+      <p>
+        The midterm examination was a pivotal assessment that tested the cumulative knowledge from the first half of the course. Preparing for this exam was more intensive than my preparation for the preliminary exam, as the scope of material was broader and the expected level of analysis was deeper. When I sat down to take the examination, I felt a greater sense of readiness and understanding compared to the preliminary exam. The experience taught me the importance of spaced review and continuous engagement with material throughout the term. Performing well on this examination validated my study methods and gave me the motivation to maintain the same disciplined approach through the final term.
+      </p>
+      <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+        <p style="font-weight: 500; margin-bottom: 10px;">Examination:</p>
+        <ul style="margin-left: 20px; color: var(--text-soft);">
+          <li>Midterm Exam 2026 - Advanced Database Systems/F (submitted)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FINALS -->
 <section id="finals" class="alt-bg">
   <div class="term-section fade-in">
@@ -494,6 +879,67 @@
   </div>
 </section>
 
+<!-- FINALS DELIVERABLES -->
+<section class="alt-bg">
+  <div class="term-section fade-in">
+    <p class="section-label">Final Term</p>
+    <h2 class="section-title">Final Deliverables</h2>
+    <div class="underline-bar"></div>
+
+    <div class="reflection-card">
+      <h3><span class="badge">Written Works</span> Quizzes</h3>
+      <p>
+        The final term quizzes represented the culmination of my learning journey throughout the entire academic year. These assessments synthesized content from all previous terms, requiring me to demonstrate mastery of foundational concepts while also showing growth in advanced applications. Preparing for these quizzes involved reviewing notes from months of studying, identifying patterns, and understanding how different topics interconnected. The quizzes in this final term felt less intimidating and more purposeful, as I had built a strong knowledge base and refined study strategies that worked for me. Performing well on these final quizzes was deeply gratifying, as it represented not just knowledge retention but genuine understanding developed over time.
+      </p>
+      <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+        <p style="font-weight: 500; margin-bottom: 10px;">Assessments Completed:</p>
+        <ul style="margin-left: 20px; color: var(--text-soft);">
+          <li>Final Term Quizzes - Comprehensive Database and SQL Server Concepts</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reflection-card">
+      <h3><span class="badge">Performance Tasks</span> Seatworks & Assignments</h3>
+      <p>
+        Final term assignments were characterized by increased complexity and often required integration of knowledge from throughout the year. These tasks pushed me to demonstrate not just what I knew, but how well I could apply, analyze, and synthesize information to solve novel problems. Working on these assignments in the final term, I noticed how much more confident and efficient I had become compared to my earlier work. I was able to identify relevant information quickly, apply appropriate methodologies, and produce work of higher quality in shorter timeframes. These final assignments served as evidence of the significant growth I had achieved across the academic year.
+      </p>
+      <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+        <p style="font-weight: 500; margin-bottom: 10px;">Tasks Completed:</p>
+        <ul style="margin-left: 20px; color: var(--text-soft);">
+          <li>Final Term Activities - Advanced SQL Queries and Database Operations</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reflection-card">
+      <h3><span class="badge">Product</span> Laboratory Exercises & Final Project</h3>
+      <p>
+        Laboratory work in the final term represented the pinnacle of my technical development throughout the year. With months of practice, I approached final laboratory exercises with a level of independence and competence I had not possessed at the beginning of the year. I was able to design procedures, troubleshoot problems independently, and communicate my findings clearly. These final exercises were not just assessments of technical skill but evidence of how much I had matured as a student and thinker. The laboratory work across the entire year had transformed me from someone following instructions to someone who could think critically about scientific processes and problem-solving approaches.
+      </p>
+      <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+        <p style="font-weight: 500; margin-bottom: 10px;">Projects Completed:</p>
+        <ul style="margin-left: 20px; color: var(--text-soft);">
+          <li>Final Group Project - Database System (100 points) - Comprehensive database design incorporating conceptual, logical, and physical models with DDL, DML, TCL, and DCL queries</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reflection-card">
+      <h3><span class="badge">Assessment</span> Final Examination</h3>
+      <p>
+        The final examination was the most comprehensive assessment I faced all year, testing my understanding of the entire course content and my ability to integrate knowledge from all three terms. Walking into the examination room, I felt a sense of confidence grounded in a full year of consistent study and growth. The exam challenged me to think critically, make connections between topics, and articulate complex ideas under time pressure. When I finished, I felt a profound sense of accomplishment — not just because I believed I had performed well, but because I recognized how far I had come from that first uncertain day of the preliminary term. This final examination was not just an ending but a testament to the transformative power of persistence, reflection, and deliberate learning throughout the entire academic year.
+      </p>
+      <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+        <p style="font-weight: 500; margin-bottom: 10px;">Examination:</p>
+        <ul style="margin-left: 20px; color: var(--text-soft);">
+          <li>Final Term Comprehensive Examination - Advanced Database Systems/F</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <strong>Mark Jazie Frix Pilapil</strong>
@@ -502,20 +948,77 @@
 </footer>
 
 <script>
+  const PROFILE_STORAGE_KEY = 'eportfolio-profile-photo';
+
+  function readPhotoFile(file, callback) {
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+      const source = e.target.result;
+      const preview = new Image();
+
+      preview.onload = function() {
+        const maxSide = 1400;
+        let { width, height } = preview;
+
+        if (Math.max(width, height) > maxSide) {
+          const scale = maxSide / Math.max(width, height);
+          width = Math.round(width * scale);
+          height = Math.round(height * scale);
+        }
+
+        const canvas = document.createElement('canvas');
+        canvas.width = width;
+        canvas.height = height;
+
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(preview, 0, 0, width, height);
+        callback(canvas.toDataURL('image/jpeg', 0.86));
+      };
+
+      preview.src = source;
+    };
+
+    reader.readAsDataURL(file);
+  }
+
+  function savePhoto(key, dataUrl) {
+    try {
+      localStorage.setItem(key, dataUrl);
+    } catch (error) {
+      console.warn('Photo could not be saved in local storage.', error);
+    }
+  }
+
+  function showProfilePhoto(dataUrl) {
+    const img = document.getElementById('profileImg');
+    const placeholder = document.getElementById('photoPlaceholderText');
+
+    img.src = dataUrl;
+    img.style.display = 'block';
+    placeholder.style.display = 'none';
+  }
+
   // Photo upload
   function loadPhoto(event) {
     const file = event.target.files[0];
     if (!file) return;
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      const img = document.getElementById('profileImg');
-      const placeholder = document.getElementById('photoPlaceholderText');
-      img.src = e.target.result;
-      img.style.display = 'block';
-      placeholder.style.display = 'none';
-    };
-    reader.readAsDataURL(file);
+
+    readPhotoFile(file, function(dataUrl) {
+      showProfilePhoto(dataUrl);
+      savePhoto(PROFILE_STORAGE_KEY, dataUrl);
+    });
+    event.target.value = '';
   }
+
+  function restoreSavedProfile() {
+    const savedProfile = localStorage.getItem(PROFILE_STORAGE_KEY);
+    if (savedProfile) {
+      showProfilePhoto(savedProfile);
+    }
+  }
+
+  restoreSavedProfile();
 
   // Fade-in on scroll
   const fadeEls = document.querySelectorAll('.fade-in');
